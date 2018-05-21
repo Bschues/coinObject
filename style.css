@@ -1,0 +1,8 @@
+#flipresult {
+    display: flex;
+    flex-flow: column wrap;
+};
+img {
+    display: flex;
+    flex-flow: column wrap;
+};
