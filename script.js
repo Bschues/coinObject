@@ -12,37 +12,35 @@ var coin = {
         // return “H” or “T” depending on whether this.state is 0 or 1
         //coin.remove();
         if (this.state === 0) {
-            let heads = document.createTextNode("Heads" + ", ");
+            let heads = document.createTextNode("Heads" + " ");
             headsOrTails.appendChild(heads);
-        } 
-
-         else {
-             let tails = document.createTextNode("Tails" + ", ");
-             headsOrTails.appendChild(tails);
-         }
+        } else {
+            let tails = document.createTextNode("Tails" + " ");
+            headsOrTails.appendChild(tails);
+        }
     },
     toHTML: function () {
         // set the properties of the image element to show either heads or tails
         if (this.state === 0) {
-        let heads = document.createElement("img");
-        heads.setAttribute("src","heads.jpg");
-        flipResult.appendChild(heads);
-        // set the properties of the image element to show either heads or tails
-        return;
-        }
-        else {
+            let heads = document.createElement("img");
+            heads.setAttribute("src", "heads.jpg");
+            flipResult.appendChild(heads);
+            // set the properties of the image element to show either heads or tails
+            return;
+        } else {
             let tails = document.createElement("img");
-            tails.setAttribute("src","tails.jpg");
+            tails.setAttribute("src", "tails.jpg");
             flipResult.appendChild(tails);
             return;
         }
 
     }
 };
-// coin.flip();
-// coin.toString();
+
 buttonElement.addEventListener('click', function (event) {
+for (let flipAmount = 0; flipAmount < 20; flipAmount++) {
     coin.flip();
     coin.toString();
     coin.toHTML();
+}
 });
